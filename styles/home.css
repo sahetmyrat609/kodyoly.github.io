@@ -9,6 +9,12 @@ body{
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 600;
 }
+.fixed{
+    padding: 0;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
 .nav-container{
     color: white;
     width: 100%;
@@ -16,12 +22,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(71, 19, 119);
-    backdrop-filter: blur(20px);
+    background: rgba(170, 125, 212, 0.315);
+    backdrop-filter: blur(30px);
 }
 nav{
     width: 100%;
-    position: fixed;
     height: 60px;
     display: flex;
     align-items: center;
@@ -58,21 +63,21 @@ nav li a{
     padding-right: 20px;
 }
 /* CONTENT */
-.content{
+.content-head{
     width: 100%;
     color: white;
-    margin-top: 30px;
+    padding-top: 70px;
     text-align: center;
     font-weight: 900;
 }
-.content .ftext{
+.content-head .ftext{
     justify-content: center;
     text-align: center;
 }
-.content .ftext h1{
+.content-head .ftext h1{
     font-size: 28pt;
 }
-.content .ftext p{
+.content-head .ftext p{
     font-size: 11pt;
     transform: rotate(5deg);
 }
@@ -96,6 +101,7 @@ nav li a{
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 14pt;
+    padding: 1px;
     font-family: 'Anonymous Pro', monospace;  
     text-align: left;
     white-space: nowrap;
@@ -104,8 +110,8 @@ nav li a{
 }
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 2s steps(40) 1s 1 normal both,
-             blinkTextCursor 500ms steps(40) infinite normal;
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 1000ms steps(44) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
@@ -124,39 +130,96 @@ nav li a{
     grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
     gap: 72px 43px;
-    margin-top: 75px;
+    margin-top: 32.5px;
+    margin-bottom: 32.5px;
 }
 .lessons a{
     text-decoration: none;
     color: white;
 }
-.lessons .card:hover .card-sname{
-    color: rgb(182, 128, 233);
+.card{
+    width: 180px;
+    justify-content: center;
+    background-color: rgb(63, 8, 114);
+    border: 2px solid rgb(107, 46, 165);
+    padding: 30px;
+    border-radius: 7px;
+    height: 250px;
+    transition: .3s ease-in-out;
+}
+.card-img{
+    width: 170px;
+    height: 190px;
+}
+.lessons .card img{
+    width: 180px;
+    transition: 0.3s ease-in-out;
+}
+.card-fname {
+    margin-top: 10px;
+}
+.card-sname p{
+    text-align: end;
+    transition: 0.3s ease-in-out;
+}
+.lessons .card:hover .card-sname p{
+    color: rgba(255, 255, 255, 0.541);
 }
 .lessons .card:hover img{
     transform: scale(105%);
 }
-.card{
-    width: 150px;
-    background-color: rgb(63, 8, 114);
-    border: 2px solid rgb(107, 46, 165);
-    padding: 30px;
-    margin-right: 20px;
-    border-radius: 7px;
-    height: 230px;
-    transition: .3s ease-in-out;
-    
-}
-.card-sname{
-    transition: 0.3s ease-in-out;
-}
-.card-sname p{
-    text-align: end;
-}
-.lessons .card img{
-    width: 150px;
-    transition: 0.3s ease-in-out;
-}
+/* Card-Background */
 .cpp.card{
-    background-color: rgb(107, 46, 165);
+    background-color: rgb(63, 8, 114);
+    border: 2px solid rgb(97, 35, 155);
+}
+.python.card{
+    background-color: rgb(128, 68, 20);
+    border: 2px solid rgb(161, 101, 52);
+}
+.html.card{
+    background-color: rgb(128, 20, 20);
+    border: 2px solid rgb(175, 68, 68);
+}
+.css.card{
+    background-color: rgb(24, 67, 117);
+    border: 2px solid rgb(43, 92, 148);
+}
+
+/* FOOTER
+.footer-logo
+.footer-links>footer-insta,footer-start,footer-linkedin */
+footer{
+    margin-top: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    color: #dee2e6;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top-width: 10px;
+    border-top: 0.1px solid #dee2e6;
+}
+.footer-links{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+footer li, footer a{
+    list-style-type: none;
+    text-decoration: none;
+    padding-right: 15px;
+    font-weight: normal;
+    color: #dee2e6;
+}
+.footer-links .footer-start img{
+    width: 18px;
 }
