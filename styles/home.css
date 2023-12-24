@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad&family=Figtree&family=Nunito+Sans:opsz@6..12&family=Outfit:wght@900&family=Raleway:ital,wght@0,300;1,200&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Afacad&family=Figtree&family=Noto+Color+Emoji&family=Nunito+Sans:opsz@6..12&family=Outfit:wght@900&family=Raleway:ital,wght@0,300;1,200&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -84,6 +86,7 @@ nav li a{
 /* Global */
 .typewriter{
     margin-top: 50px;
+    margin-bottom: 100px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -185,7 +188,33 @@ nav li a{
     background-color: rgb(24, 67, 117);
     border: 2px solid rgb(43, 92, 148);
 }
-
+/* Work-Content */
+.content{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+.about-work{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    align-items: center;
+}
+.work-card{
+    text-align: center;
+    color: white;
+}
+.work-text{
+    background-color: rgb(71, 19, 119);
+    padding: 17px 30px;
+    border-radius: 7px;
+}
+index{
+    font-family: 'Noto Color Emoji', sans-serif;
+}
 /* FOOTER
 .footer-logo
 .footer-links>footer-insta,footer-start,footer-linkedin */
@@ -222,4 +251,50 @@ footer li, footer a{
 }
 .footer-links .footer-start img{
     width: 18px;
+}
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes diagonal-fall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+        transform: translate(10vw, 100vh);
+    }
 }
