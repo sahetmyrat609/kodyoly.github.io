@@ -115,3 +115,48 @@ nav li a{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
 }
+
+/* Lessons */
+.lessons{
+    color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 72px 43px;
+    margin-top: 75px;
+}
+.lessons a{
+    text-decoration: none;
+    color: white;
+}
+.lessons .card:hover .card-sname{
+    color: rgb(182, 128, 233);
+}
+.lessons .card:hover img{
+    transform: scale(105%);
+}
+.card{
+    width: 150px;
+    background-color: rgb(63, 8, 114);
+    border: 2px solid rgb(107, 46, 165);
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 7px;
+    height: 230px;
+    transition: .3s ease-in-out;
+    
+}
+.card-sname{
+    transition: 0.3s ease-in-out;
+}
+.card-sname p{
+    text-align: end;
+}
+.lessons .card img{
+    width: 150px;
+    transition: 0.3s ease-in-out;
+}
+.cpp.card{
+    background-color: rgb(107, 46, 165);
+}
