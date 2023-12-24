@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad&family=Figtree&family=Outfit:wght@900&family=Raleway:ital,wght@0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad&family=Figtree&family=Nunito+Sans:opsz@6..12&family=Outfit:wght@900&family=Raleway:ital,wght@0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
 *{
     margin: 0;
     padding: 0;
 }
 body{
     background-color: rgb(47, 11, 80);
-    font-family: 'Afacad', sans-serif;
-    font-family: 'Figtree', sans-serif;
-    font-family: 'Outfit', sans-serif;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 600;
 }
 .nav-container{
@@ -20,10 +18,10 @@ body{
     justify-content: center;
     background: rgb(71, 19, 119);
     backdrop-filter: blur(20px);
-    position: fixed;
 }
 nav{
     width: 100%;
+    position: fixed;
     height: 60px;
     display: flex;
     align-items: center;
@@ -58,4 +56,62 @@ nav li a{
     color: #dddddd;
     padding-left: 20px;
     padding-right: 20px;
+}
+/* CONTENT */
+.content{
+    width: 100%;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 900;
+}
+.content .ftext{
+    justify-content: center;
+    text-align: center;
+}
+.content .ftext h1{
+    font-size: 28pt;
+}
+.content .ftext p{
+    font-size: 11pt;
+    transform: rotate(5deg);
+}
+/* Global */
+.typewriter{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.style-type{
+    background-color: rgb(71, 19, 119);
+    border-radius: 7px;
+    padding: 16px;
+    border: 2px solid rgb(85, 26, 141);
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 14pt;
+    font-family: 'Anonymous Pro', monospace;  
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(40) 1s 1 normal both,
+             blinkTextCursor 500ms steps(40) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 12em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
